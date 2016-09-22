@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/public/index.html
+web: java $JAVA_OPTS -cp target/classes:target/dots-1.0.jar com.oose2016.imukher3.dots.Bootstrap.class
