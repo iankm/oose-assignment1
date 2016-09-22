@@ -1,0 +1,94 @@
+{
+	"variables": [],
+	"info": {
+		"name": "dots",
+		"_postman_id": "b0f9e85a-985d-672d-dda9-8e2e93a32ac4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "start game",
+			"request": {
+				"url": "http://localhost:8080/games",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"playerType": " ",
+				},
+				"description": "start a new Dots game; the creator of the game chooses their color, either \"RED\" or \"BLUE\""
+			},
+			"response": []
+		},
+		{
+			"name": "join game",
+			"request": {
+				"url": "http://localhost:8080/games/:gameId",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "result is a JSON list of all the current todos"
+			},
+			"response": []
+		},
+		{
+			"name": "Horizontal Move",
+			"request": {
+				"url": "http://localhost:8080/games/:gameId/hmove",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Vertical Move",
+			"request": {
+				"url": "http://localhost:8080/games/:gameId/vmove",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"New Todo 2 edited\",\"done\":false}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get board",
+			"request": {
+				"url": "http://localhost:8080/games/:gameId/board",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "describes the current state of the board"
+			},
+			"response": []
+		},
+		{
+			"name": "get state",
+			"request": {
+				"url": "http://localhost:8080/games/:gameId/state",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "gets the current state of the game"
+			},
+			"response": []
+		}
+	]
+}
